@@ -1,4 +1,4 @@
-"""Project: Gallery catalog."""
+
 
 # NOTE Import the necessary modules to make the server side with flask.
 # Modules for making the server app with flask, login with google
