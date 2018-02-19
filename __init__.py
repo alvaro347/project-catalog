@@ -13,7 +13,7 @@ from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Gallery, Pictures, User
 from oauth2client.client import flow_from_clientsecrets
-from oauth2client.client import FlowExchangeError
+from lib.oauth2client.client import FlowExchangeError
 from werkzeug.utils import secure_filename
 
 import httplib2
