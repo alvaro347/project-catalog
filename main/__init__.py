@@ -9,19 +9,19 @@ from flask import redirect, jsonify, url_for, flash
 from flask import session as login_session
 from flask import make_response
 
-# from sqlalchemy import create_engine, asc
-# from sqlalchemy.orm import sessionmaker
-# from database_setup import Base, Gallery, Pictures, User
-# from oauth2client.client import flow_from_clientsecrets
-# from oauth2client.client import FlowExchangeError
-# from werkzeug.utils import secure_filename
-#
-# import httplib2
-# import requests
-# import random
-# import string
-# import json
-# import os
+from sqlalchemy import create_engine, asc
+from sqlalchemy.orm import sessionmaker
+from database_setup import Base, Gallery, Pictures, User
+from oauth2client.client import flow_from_clientsecrets
+from oauth2client.client import FlowExchangeError
+from werkzeug.utils import secure_filename
+
+import httplib2
+import requests
+import random
+import string
+import json
+import os
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static'
@@ -40,7 +40,7 @@ CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
 
 app.secret_key = 'project-catalog-key'
-# app.debug = True
+app.debug = True
 
 ###################
 # Gallery section #
