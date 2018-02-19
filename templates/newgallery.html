@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "main.html" %}
+{% block content %}
+
+<form class="form" action="#" method="POST" enctype="multipart/form-data">
+  <input type="text" name="title" placeholder="Insert Title">
+  <input type="file" name="pic" accept="image/jpeg,image/png,image/gif">
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends "main.html" %}
+{% block content %}
+
+<div class = "flash">
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <ul>
+    {% for message in messages %}
+    <li> <strong> {{ message }} </strong> </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% endwith %}
+
+</div>
+
+<div class="addbutton">
+  <a class="addtext link" href="{{ url_for('newGallery') }}">Add new gallery
+  </a>
+</div>
+
+<div class="gallery">
+
+  {% for element in gallery %}
+
+  <div class="galleryelement">
+    <div class="imgcontainer">
+      <a class="link" href="{{ url_for('showPictures', gallery_id=element.id)}}">
+        <img class="img" src="{{ url_for('static', filename=element.imgfile) }}" alt="{{ element.title }}">
+      </a>
+    </div>
+
+    <div class="gallerytext">
+      <a class="link" href="{{ url_for('showPictures', gallery_id=element.id)}}">
+        <h2>{{ element.title }}</h2>
+      </a>
+      <div class="links">
+        <a class="link" href="{{ url_for('editGallery', gallery_id=element.id)}}">
+          <button class="" id="">
+            Edit Gallery
+          </button>
+        </a>
+        <a class="link" href="{{ url_for('deleteGallery', gallery_id=element.id)}}">
+          <button class="" id="">
+            Delete Gallery
+          </button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  {% endfor %}
+
+</div>
+
+{% endblock %}

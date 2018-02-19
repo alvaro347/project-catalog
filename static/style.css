@@ -1,0 +1,168 @@
+/* NOTE Style for the catalog project */
+/* Full-stack web developer project: Item catalog */
+/*Alvaro Fernandez Rodriguez (@alvarogna) AFR design*/
+
+/* General styles */
+/* Links and content */
+
+* {
+  box-sizing: border-box;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+/* NOTE Header and navigation section */
+
+
+nav {
+  display: flex;
+}
+
+.header-logo {
+  height: 100px;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.headernav {
+  height: 60px;
+  background: rgb(193, 193, 193);
+}
+
+.navigation {
+  font-size: 40px;
+  color: white;
+  flex-grow: 2;
+}
+
+#login {
+  text-align: right;
+}
+
+
+/* NOTE gallery section */
+
+
+.galleryelement {
+  min-width: 350px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img {
+  height: 100%;
+}
+
+.imgcontainer {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 150px;
+  margin: 0 auto;
+}
+
+
+/* NOTE Footer Section */
+
+
+.footercontent{
+  margin: auto auto;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  height: 50px;
+  background: rgb(193, 193, 193);
+  width: 100%;
+}
+
+.navtext {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* NOTE Picture Presentation */
+/* Not much to add just alignment */
+
+.picture {
+  text-align: center;
+  margin: 10px;
+}
+
+
+/* NOTE Forms and buttons */
+/* Forms doesnt have class. */
+/* Will be treated in general */
+/* to have a consistant look */
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #3f899d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #36788a;
+}
+
+/* Add gallery and picture button */
+
+.addbutton {
+  width: 50%;
+  background-color: #3f899d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.addbutton:hover {
+  background-color: #36788a;
+}
+
+.addtext {
+  color: white;
+  font-size: 20px;
+}

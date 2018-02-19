@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  <title>Gallery catalog</title>
+  <link rel="shortcut icon" href="/static/favicon.png">
+</head>
+<body>
+
+  <!-- NOTE Header Section-->
+  <!-- Login logout buttons here -->
+
+  <header>
+    <nav class="headernav">
+      <div class="navigation"><a a class="link navtext" href="{{ url_for('showGalleries') }}">Main</a></div>
+      <div class="navigation" id="login"><a class="link navtext" href="{{ url_for('showLogin') }}">Login</a><a class="link navtext" href="{{ url_for('gdisconnect') }}">Logout</a></div>
+    </nav>
+    <div class="logo-container">
+      <a a class="link navtext" href="{{ url_for('showGalleries') }}">
+        <img class="header-logo" src="/static/headerlogo.png" alt="header-logo">
+      </a>
+    </div>
+  </header>
+
+<!-- NOTE This part is the content -->
+<!-- The python function used here will allow us -->
+<!-- to use this file as a template -->
+
+  <div class="content">
+
+    {% block content %}
+    {% endblock %}
+
+  </div>
+
+<!-- NOTE Footer section -->
+
+  <footer class="footer">
+    <div class="footercontent">
+      Gallery
+    </div>
+    <div class="footercontent">
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="¡CSS Válido!" />
+    </a>
+</div>
+  </footer>
+
+</body>
+</html>

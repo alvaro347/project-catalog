@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends "main.html" %}
+{% block content %}
+
+<div class="picture">
+  <h1>{{ picture.title }} from {{ gallery.title }} gallery</h1>
+
+  <img src=" {{ url_for('static', filename=picture.imgfile)  }} " alt="{{ picture.title }}">
+</div>
+
+
+{% endblock %}

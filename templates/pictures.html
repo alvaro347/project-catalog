@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends "main.html" %}
+{% block content %}
+
+<div class="addbutton">
+  <a class="addtext link" href="{{ url_for('newPicture', gallery_id=gallery_id) }}">Add new picture
+  </a>
+</div>
+
+
+<div class="gallery">
+  {% for picture in pictures %}
+  <div class="galleryelement">
+
+    <div class="imgcontainer">
+      <a href="{{ url_for('showPicture', gallery_id=gallery_id, picture_id=picture.id) }}">
+        <img class="img" src="{{ url_for('static', filename=picture.imgfile) }}" alt="{{ picture.title }}">
+      </a>
+
+    </div>
+
+    <div class="gallerytext">
+      <h2>{{ picture.title }}</h2>
+      <div class="links">
+        <a class="link" href="{{ url_for('editPicture', gallery_id=gallery.id, picture_id=picture.id)  }}">
+          <button class="" id="">
+            Edit Picture
+          </button>
+        </a>
+        <a class="link" href="{{ url_for('deletePicture', gallery_id=gallery.id, picture_id=picture.id)  }}">
+          <button class="" id="">
+            Delete Picture
+          </button>
+        </a>
+
+
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}
