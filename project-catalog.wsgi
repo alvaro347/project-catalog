@@ -8,4 +8,4 @@ logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0,"/var/www/project-catalog/")
 
 from main import app as application
-application.secret_key = 'catalog_application'
+application.secret_key = 'key'
