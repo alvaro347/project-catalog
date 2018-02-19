@@ -39,10 +39,13 @@ session = DBSession()
 CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
 
+app.secret_key = 'project-catalog-key'
+app.debug = True
 
 ###################
 # Gallery section #
 ###################
+
 
 # NOTE: Show all images
 
@@ -425,6 +428,4 @@ def galleriesJSON():
 
 
 if __name__ == '__main__':
-    app.secret_key = 'key'
-    app.debug = True
     app.run(host='0.0.0.0', port=80)
