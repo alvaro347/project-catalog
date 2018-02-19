@@ -40,7 +40,7 @@ CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
 
 app.secret_key = 'project-catalog-key'
-app.debug = True
+# app.debug = True
 
 ###################
 # Gallery section #
@@ -53,7 +53,7 @@ app.debug = True
 @app.route('/gallery/')
 def showGalleries():
     gallery = session.query(Gallery).all()
-    return render_template('gallery.html', gallery=gallery)
+    return 'Hello'
 
 
 # NOTE: Add a new gallery
