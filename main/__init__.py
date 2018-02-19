@@ -50,7 +50,6 @@ app.secret_key = 'project-catalog-key'
 # NOTE: Show all images
 
 @app.route('/')
-@app.route('/gallery/')
 def showGalleries():
     gallery = session.query(Gallery).all()
     return 'Hello'
