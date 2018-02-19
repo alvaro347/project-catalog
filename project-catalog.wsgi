@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python2
 activate_this = '/var/www/project-catalog/venv/Scripts/activate_this.py'
 execfile(activate_this, dict(__file__=activate_this))
 
