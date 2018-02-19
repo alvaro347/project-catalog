@@ -1,4 +1,4 @@
-* Project Item Catalog: Gallery *
+** Project Item Catalog: Gallery **
 -------------------------------------
 
 * Introduction:
