@@ -29,7 +29,9 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # NOTE: Connect to Database and create database session
 
-engine = create_engine('sqlite:///imagegallery.db')
+engine = create_engine(
+    'postgresql://project-catalog:database@localhost/imagegallery.db'
+    )
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
@@ -424,5 +426,5 @@ def galleriesJSON():
 
 if __name__ == '__main__':
     app.secret_key = 'key'
-    # app.debug = True
+    app.debug = True
     app.run(host='0.0.0.0', port=8000)
