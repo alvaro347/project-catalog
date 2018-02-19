@@ -48,8 +48,8 @@ app.secret_key = 'project-catalog-key'
 
 @app.route('/')
 def showGalleries():
-    gallery = session.query(Gallery).all()
-    return render_template('gallery.html', gallery=gallery)
+    # gallery = session.query(Gallery).all()
+    return render_template('gallery.html')
 
 
 # NOTE: Add a new gallery
