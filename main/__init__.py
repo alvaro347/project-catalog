@@ -1,4 +1,4 @@
-
+"""Project Catalog."""
 
 # NOTE Import the necessary modules to make the server side with flask.
 # Modules for making the server app with flask, login with google
@@ -22,20 +22,20 @@ import json
 import os
 
 app = Flask(__name__)
-# UPLOAD_FOLDER = 'static'
-# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+UPLOAD_FOLDER = 'static'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # NOTE: Connect to Database and create database session
 
-# engine = create_engine(
-#     'postgresql://project-catalog:database@localhost/imagegallery.db'
-#     )
-# Base.metadata.bind = engine
-# DBSession = sessionmaker(bind=engine)
-# session = DBSession()
+engine = create_engine(
+    'postgresql://project-catalog:database@localhost/imagegallery.db'
+    )
+Base.metadata.bind = engine
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
 
-# CLIENT_ID = json.loads(
-#     open('client_secrets.json', 'r').read())['web']['client_id']
+CLIENT_ID = json.loads(
+    open('client_secrets.json', 'r').read())['web']['client_id']
 
 app.secret_key = 'project-catalog-key'
 

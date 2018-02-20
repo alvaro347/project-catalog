@@ -68,6 +68,5 @@ class Pictures(Base):
 
 # NOTE Creates the table with sqlalchemy
 
-engine = create_engine('sqlite:///imagegallery.db')
-
+engine = create_engine('postgresql://catalog:database@localhost/catalogdb')
 Base.metadata.create_all(engine)
