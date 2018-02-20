@@ -27,6 +27,10 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # NOTE: Connect to Database and create database session
 
+CLIENT_ID = json.loads(open(
+    '/var/www/catalog/main/client_secrets.json', 'r'
+    ).read())['web']['client_id']
+
 engine = create_engine(
     'postgresql://project-catalog:database@localhost/imagegallerydb'
     )
@@ -34,8 +38,6 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-CLIENT_ID = json.loads(
-    open('client_secrets.json', 'r').read())['web']['client_id']
 
 app.secret_key = 'project-catalog-key'
 
