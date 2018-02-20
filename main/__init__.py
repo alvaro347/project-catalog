@@ -28,7 +28,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # NOTE: Connect to Database and create database session
 
 engine = create_engine(
-    'postgresql://project-catalog:database@localhost/imagegallery.db'
+    'postgresql://project-catalog:database@localhost/imagegallerydb'
     )
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
