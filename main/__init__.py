@@ -32,7 +32,7 @@ CLIENT_ID = json.loads(open(
     '/var/www/catalog/main/client_secrets.json', 'r'
     ).read())['web']['client_id']
 
-engine = create_engine('postgresql://project-user:pospass@localhost/imagegallery.db')
+engine = create_engine('postgresql://project-user:pospass@localhost/imagegallery')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()

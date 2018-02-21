@@ -7,7 +7,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Gallery, Base, Pictures, User
 
-engine = create_engine('sqlite:///imagegallery.db')
+create_engine('postgresql://catalog:pospass@localhost/imagegallery')
+
+
 
 
 
