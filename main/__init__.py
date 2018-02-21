@@ -73,7 +73,7 @@ def newGallery():
             imgfile=filename
             )
         session.add(addgallery)
-        # flash('New Gallery {} Successfully Created'.format(addgallery.title))
+        flash('New Gallery {} Successfully Created'.format(addgallery.title))
         session.commit()
         return redirect(url_for('showGalleries'))
     else:
