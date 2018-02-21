@@ -69,5 +69,7 @@ class Pictures(Base):
 
 # NOTE Creates the table with sqlalchemy
 
-engine = engine = create_engine('postgresql://catalog:pospass@localhost/imagegallery')
-Base.metadata.bind = engine
+engine = engine = create_engine(
+    'postgresql://catalog:pospass@localhost/imagegallery.db'
+    )
+Base.metadata.create_all(engine)
