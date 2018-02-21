@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database_setup import Gallery, Base, Pictures, User
 
-engine = create_engine('postgresql://catalog:pospass@localhost/imagegallery')
+engine = create_engine('postgresql://catalog:pospass@localhost/imagegallery.db')
 
 
 # NOTE: Bind the engine to the metadata of the Base class so that the
