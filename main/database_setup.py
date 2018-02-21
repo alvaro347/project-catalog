@@ -3,6 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
 
+
 Base = declarative_base()
 
 
@@ -68,7 +69,5 @@ class Pictures(Base):
 
 # NOTE Creates the table with sqlalchemy
 
-engine = create_engine(
-    'postgresql://project-catalog:database@localhost/imagegallerydb'
-    )
-Base.metadata.bind = engine
+engine = create_engine('sqlite:///imagegallery.db')
+Base.metadata.create_all(engine)
