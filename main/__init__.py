@@ -29,7 +29,7 @@ app = Flask(__name__)
 # NOTE: Connect to Database and create database session
 
 CLIENT_ID = json.loads(open(
-    '/var/www/catalog/main/client_secrets.json', 'r'
+    '/var/www/project-catalog/main/client_secrets.json', 'r'
     ).read())['web']['client_id']
 
 engine = create_engine(
