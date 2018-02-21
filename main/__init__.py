@@ -22,8 +22,8 @@ import json
 import os
 
 app = Flask(__name__)
-UPLOAD_FOLDER = 'static'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# UPLOAD_FOLDER = 'static'
+# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.debug = True
 
 # NOTE: Connect to Database and create database session
@@ -50,7 +50,6 @@ app.secret_key = 'project-catalog-key'
 # NOTE: Show all images
 
 @app.route('/')
-@app.route('/gallery/')
 def showGalleries():
     # gallery = session.query(Gallery).all()
     # gallery=gallery
