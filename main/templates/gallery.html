@@ -14,12 +14,11 @@
   {% endwith %}
 
 </div>
-
-<div class="addbutton">
-  <a class="addtext link" href="{{ url_for('newGallery') }}">Add new gallery
-  </a>
-</div>
-
+<a class="addtext link" href="{{ url_for('newGallery') }}">Add new
+  <div class="addbutton">
+    gallery
+  </div>
+</a>
 <div class="gallery">
 
   {% for element in gallery %}
