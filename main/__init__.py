@@ -22,22 +22,22 @@ import json
 import os
 
 app = Flask(__name__)
-UPLOAD_FOLDER = 'static'
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.debug = True
+# UPLOAD_FOLDER = 'static'
+# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# app.debug = True
 
 # NOTE: Connect to Database and create database session
 
-CLIENT_ID = json.loads(open(
-    '/var/www/catalog/main/client_secrets.json', 'r'
-    ).read())['web']['client_id']
-
-engine = create_engine(
-    'postgresql://catalog:pospass@localhost/imagegallery'
-    )
-Base.metadata.bind = engine
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
+# CLIENT_ID = json.loads(open(
+#     '/var/www/catalog/main/client_secrets.json', 'r'
+#     ).read())['web']['client_id']
+#
+# engine = create_engine(
+#     'postgresql://catalog:pospass@localhost/imagegallery'
+#     )
+# Base.metadata.bind = engine
+# DBSession = sessionmaker(bind=engine)
+# session = DBSession()
 
 
 app.secret_key = 'project-catalog-key'
@@ -51,8 +51,9 @@ app.secret_key = 'project-catalog-key'
 
 @app.route('/')
 def showGalleries():
-    gallery = session.query(Gallery).all()
-    return render_template('gallery.html', gallery=gallery)
+    # gallery = session.query(Gallery).all()
+    # gallery=gallery
+    return render_template('gallery.html')
 
 
 # NOTE: Add a new gallery
