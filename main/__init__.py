@@ -33,7 +33,7 @@ CLIENT_ID = json.loads(open(
     ).read())['web']['client_id']
 
 engine = create_engine(
-    'postgresql://catalog:pospass@localhost/imagegallery.db'
+    'postgresql://catalog:pospass@localhost/imagegallery'
     )
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)

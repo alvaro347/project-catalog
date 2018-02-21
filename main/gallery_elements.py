@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from database_setup import Gallery, Base, Pictures, User
 
 engine = create_engine(
-    'postgresql://catalog:pospass@localhost/imagegallery.db'
+    'postgresql://catalog:pospass@localhost/imagegallery'
 )
 
 
