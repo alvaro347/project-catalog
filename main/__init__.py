@@ -22,9 +22,9 @@ import json
 import os
 
 app = Flask(__name__)
-# UPLOAD_FOLDER = 'static'
-# app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-# app.debug = True
+UPLOAD_FOLDER = '/var/www/project-catalog/main/static'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.debug = True
 
 # NOTE: Connect to Database and create database session
 
