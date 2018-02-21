@@ -53,7 +53,7 @@ app.secret_key = 'project-catalog-key'
 def showGalleries():
     # gallery = session.query(Gallery).all()
     # gallery=gallery
-    return render_template('gallery,html')
+    return render_template('gallery.html')
 
 
 # NOTE: Add a new gallery
