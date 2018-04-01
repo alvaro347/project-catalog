@@ -7,10 +7,10 @@ information:
 2. URL: http://ec2-35-177-44-39.eu-west-2.compute.amazonaws.com
 
 **** Passwords ***
-**** passphrase: udacityproject
+**** passphrase: 
 
 
-**** grader user password: linuxgrader
+**** grader user password: 
 
 3. Software installed:
 
